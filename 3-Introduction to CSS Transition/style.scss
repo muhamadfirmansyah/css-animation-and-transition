@@ -1,0 +1,63 @@
+ul {
+    margin: 0;
+    padding: 0;
+}
+
+.item {
+    padding: 10px;
+    background-color: #1caa1c;
+    color: #FFF;
+    margin-bottom: 10px;
+}
+
+.ball {
+    border-radius: 50%;
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    background-color: #203294;
+}
+
+.item-1 .ball {
+    // animation: 1s circle;
+    // animation-iteration-count: infinite;
+    // animation-direction: alternate;
+    // animation-delay: 1s;
+    //
+    // Or you can do by doing this
+    animation: circle 1s infinite alternate;
+}
+
+// create animation
+@keyframes circle {
+    from {
+        transform: translateX(0px);
+    }
+    to {
+        transform: translateX(300px);
+    }
+}
+
+.item-2 .ball {
+    animation: circle-2 1s infinite alternate;
+}
+
+// using persentages
+@keyframes circle-2 {
+    0% {
+        transform: translateX(0px);
+    }
+    40% {
+        // transform: translateY(10px);
+        background-color: #ff0898;
+    }
+    50% {
+        background-color: #48eafc;
+    }
+    70% {
+        background-color: #e8fd2a;
+    }
+    100% {
+        transform: translateX(300px);
+    }
+}
